@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const comentarioSchema = mongoose.Schema({
     DescripComent: {
         type: String,
-        required: true
+        required: false
     },
 
     Juego: {
