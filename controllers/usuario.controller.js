@@ -65,7 +65,7 @@ exports.update = function(req, res) {
 };
 
 exports.delete = function(req, res) {
-    Tripulante.remove({
+    usuario.remove({
         _id: req.body.id
     }, function(err, usuario) {
         if (err)
