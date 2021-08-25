@@ -16,7 +16,7 @@ const juegoSchema = mongoose.Schema({
     },
 
     clasificacionEdad: {
-        type: int,
+        type: String,
         required: true
     },
 
@@ -33,7 +33,13 @@ const juegoSchema = mongoose.Schema({
     plataforma: {
         type: String,
         required: true
-    }    
+    }
 })
 
-module.exports = mongoose.model('juego', juegoSchema);
+let Juego = module.exports = mongoose.model('Juego', juegoSchema);
+
+module.exports.get = function(callback, limit) {
+
+    Juego.find(callback).limit(limit);
+
+}
